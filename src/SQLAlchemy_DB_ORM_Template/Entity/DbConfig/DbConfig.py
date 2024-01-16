@@ -20,7 +20,7 @@ class DbConfig:
 
         self.__host = ''
         self.__userName = ''
-        self.__password = ""
+        self.__password = ''
 
     # endregion
 

@@ -27,6 +27,7 @@ app = Flask(__name__)
 try:
 
     index = int(input("Enter the index of the database you want to connect to: "))
+    print("")
 
     if index < 0 or index > len(migrationFolderList) - 1:
         raise Exception("Invalid database index")
@@ -38,7 +39,7 @@ except:
 
     raise Exception("You must enter a valid number")
 
-DbConfigs = DbConfig(index)
+DbConfig().main(index)
 
 app.config['DEBUG'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = DbConfig.dbUrl

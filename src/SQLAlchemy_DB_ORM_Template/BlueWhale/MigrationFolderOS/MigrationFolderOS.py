@@ -3,7 +3,7 @@
 import shutil
 import os
 
-from Utils.GeneralLists import migrationFolderList
+from Utils.GeneralLists import migrationFolderList, dataBases
 
 # endregion
 
@@ -23,7 +23,7 @@ class MigrationFolderOS:
 
     def changeFolder(self, index):
 
-        print("Database: ", self.__database)
+        print("\nDatabase: ", str(dataBases[index]) + "\n")
 
         migrationsFolders = [folderName for folderName in os.listdir(self.__dirPath) if folderName.startswith("migrations")]
 
